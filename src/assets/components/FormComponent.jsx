@@ -8,16 +8,19 @@ import LogginButton from "./LoginButton";
  * 
  * @param {*} placeholderA String for placeholder inputA
  * @param {*} placeholderB String for placeholder inputB
- * @returns a FormComponent with 2 inputs
+ * @param {*} click recieves a arrow function to display an alert message through Logging Button component
+ * @param {*} callBack recieves a arrow function useCallback to display a callback action message through Logging Button component
+ * @returns a FormComponent with 4 inputs
  */
 
-const FormComponent = ({placeholderA,placeholderB}) =>{
+const FormComponent = ({placeholderA,placeholderB, click, callBack}) =>{
     return(
         <div>
-            <form action="#" method="post">
-                <InputA placeholderName={placeholderA}/>
-                <InputB placeholderName={placeholderB}/>
-                <LogginButton texto='login'/>
+            <form action="#">
+                {/* <InputA placeholderName={placeholderA}/> */}
+                {/* <InputB placeholderName={placeholderB}/> */}
+                <LogginButton text='Presiona 1ro aqui' click={click}/>
+                <LogginButton text='Presiona ahora aqui' click={callBack}/>
             </form>
         </div>
     );
